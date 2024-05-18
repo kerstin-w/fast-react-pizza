@@ -5,6 +5,12 @@ A brief description of your project.
 ## Table of Contents
 
 - [Business Requirements](#business-requirements)
+- [Features](#features)
+  - [User](#user)
+  - [Menu](#menu)
+  - [Cart](#cart)
+  - [Order](#order)
+- [Technologies](#technologies)
 - [Installation](#installation)
 
 ## Business Requirements
@@ -20,6 +26,32 @@ A brief description of your project.
 - Payments are made on delivery, so no payment processing is required
 - Each order will get a unique order number, which the user can use to track their order
 - Users should also be able to mark their order as "priority" order even after it has been placed
+
+## Features
+
+### User
+
+Global UI state
+
+### Menu
+
+Global remote state (fetch from API)
+
+### Cart
+
+Global UI state
+
+### Order
+
+Global remote state (POST to API and fetched from API)
+
+## Technologies
+
+- **Routing:** [React Router](https://reactrouter.com/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **State Management:**
+  - Remote state management: [React Router](https://reactrouter.com/)
+  - UI State management: [Redux](https://redux.js.org/)
 
 ## Installation
 
