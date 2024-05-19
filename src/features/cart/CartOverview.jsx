@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /**
  * The CartOverview function displays the number of pizzas and total cost in a cart
  * with a link to open the cart.
@@ -11,7 +13,7 @@ function CartOverview() {
         <span>23 pizzas</span>
         <span>$23.45</span>
       </p>
-      <a href="#">Open cart &rarr;</a>
+      <Link to="/cart">Open cart &rarr;</Link>
     </div>
   );
 }
