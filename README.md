@@ -55,4 +55,65 @@ Global remote state (POST to API and fetched from API)
 
 ## Installation
 
-Instructions on how to install and set up your project.
+To install and set up the project, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd your-repo
+```
+
+3. Install the dependencies for **React Router**:
+
+```bash
+npm install react-router-dom
+```
+
+4. Install the dependencies for **Tailwind CSS**:
+
+```bash
+npm install tailwindcss
+npx tailwindcss init
+```
+
+**Configure Tailwind:**
+tailwind.config.js
+
+```javascript
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+**Include Tailwind in Your CSS**
+Create a src/tailwind.css file and add the following lines:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Replace the contents of the generated tailwind.config.js with the following:
+
+5. Install the dependencies for **Redux**:
+
+```bash
+npm install redux react-redux
+```
+
+6. Start the development server:
+
+```bash
+npm start
+```
