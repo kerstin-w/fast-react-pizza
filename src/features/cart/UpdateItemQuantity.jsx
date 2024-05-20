@@ -1,14 +1,26 @@
+import { useDispatch } from "react-redux";
 import Button from "../../ui/Button";
+import { decreaseItemQuantity, increaseItemQuantity } from "./cartSlice";
 
-/**
- * The UpdateItemQuantity function renders buttons to decrease or increase the quantity of a pizza item.
- * @returns A JSX element is being returned, which contains two Button components wrapped in a div with specific class names for styling.
- */
-function UpdateItemQuantity({ pizzaId }) {
+/** This component named `UpdateItemQuantity` that is responsible for rendering a UI element to update the quantity of a specific item in a shopping cart. */
+function UpdateItemQuantity({ pizzaId, currentQuantity }) {
+  const dispatch = useDispatch();
+
   return (
-    <div className="flex items-center gap-1 md:gap-3">
-      <Button type="round">-</Button>
-      <Button type="round">+</Button>
+    <div className="flex items-center gap-2 md:gap-3">
+      <Button
+        type="round"
+        onClick={() => dispatch(decreaseItemQuantity(pizzaId))}
+      >
+        -
+      </Button>
+      <span className="text-sm font-medium">{currentQuantity}</span>
+      <Button
+        type="round"
+        onClick={() => dispatch(increaseItemQuantity(pizzaId))}
+      >
+        +
+      </Button>
     </div>
   );
 }
