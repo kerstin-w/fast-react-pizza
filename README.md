@@ -1,6 +1,12 @@
-# Project Title
+# Fast React Pizza
 
-A brief description of your project.
+The project is a simple application where users can order pizzas from a menu. It does not require user accounts or login. The pizza menu is loaded from an API and users can add multiple pizzas to a cart before ordering. The order requires the user's name, phone number, and address. Optionally, the user can provide GPS location for easier delivery. Users can mark their order as "priority" for an additional 20% of the cart price. Orders are made by sending a POST request with the order data to an API. Payments are made on delivery and each order is assigned a unique order number for tracking. Users can also mark their order as "priority" even after it has been placed.
+
+This project was created for learining purposes and to practice building a simple application with React, Redux, React Router, and Tailwind CSS.
+
+# Live Website
+
+Check out the live website [here](https://fast-react-pizza-kw.netlify.app/).
 
 ## Table of Contents
 
