@@ -1,21 +1,26 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
+import { updateName } from "./userSlice";
 import Button from "../../ui/Button";
 
 /**
- * The function CreateUser creates a form for users to input their name and start
- * ordering.
- * @returns The `CreateUser` function returns a form with an input field for the user to enter their
- * full name. Once the user enters their name, a button "Start ordering" is displayed below the input
- * field. The form also includes a welcome message prompting the user to enter their name. The form
- * submission is handled by the `handleSubmit` function, which prevents the default form submission
- * behavior.
+ * The `CreateUser` function in JavaScript React creates a form for users to input their name, dispatches an action to update the user's name in the Redux store, and navigates to the menu page upon submission.
+ * @returns The `CreateUser` function returns a form component that allows a user to input their full name. The user's input is stored in the `username` state using `useState` hook. When the form is submitted, the `handleSubmit` function is called, which dispatches an action to update the user's name in the Redux store and then navigates to the "/menu" route. If the `username` state is not empty, a submit button is rendered.
  */
 function CreateUser() {
   const [username, setUsername] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (!username) return;
+    // Dispatch an action to update the user's name in the Redux store
+    dispatch(updateName(username));
+    navigate("/menu");
   }
 
   return (
