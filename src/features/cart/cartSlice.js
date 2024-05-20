@@ -5,7 +5,7 @@ const initialState = {
   // Test Data for development
   cart: [
     {
-      id: 12,
+      pizzaId: 12,
       name: "Mediterranean",
       quantity: 2,
       unitPrice: 16,
